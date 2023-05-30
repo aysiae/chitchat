@@ -1,7 +1,7 @@
-import './App.css';
+import { MainLayout } from './layout/main';
 
 function App() {
-	return <div>Hello!</div>;
+	return <MainLayout />;
 }
 
 export default App;
