@@ -1,10 +1,10 @@
+import React from 'react';
 import { useState } from 'react';
-import './Navbar.scss';
 
 export function NavBar() {
 	const [selected, setSelected] = useState([true, false]);
 
-	const isSelected = (e) => {
+	const isSelected = (e: any) => {
 		e.preventDefault();
 		if (e.target.innerText === 'Home') {
 			setSelected([true, false]);
@@ -15,13 +15,13 @@ export function NavBar() {
 
 	const navBar = {
 		display: 'flex',
-		flexDirection: 'row',
+		FlexDirection: 'row',
 		justifyContent: 'space-evenly',
 		width: '80%',
 	};
 
 	const selectedStyle = {
-		borderBottom: '2px red solid',
+		borderBottom: '2px #c188d7 solid',
 	};
 
 	const baseStyle = {};
