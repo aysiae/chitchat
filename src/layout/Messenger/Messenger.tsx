@@ -1,6 +1,8 @@
 import React from 'react';
 import { ChatBubble } from '../../compononents/ChatBubble/ChatBubble';
 import { Textbox } from '../../compononents/Textbox/Textbox';
+import { Colorizer } from '../../helpers/ColorMode';
+import { Colors } from '../../types/ColorPalettes';
 import { store } from '../../store/store';
 
 export function Messenger() {
@@ -12,7 +14,7 @@ export function Messenger() {
 		padding: '15px',
 		width: '500px',
 		borderRadius: '15px',
-		backgroundColor: '#b8bcf2',
+		backgroundColor: Colorizer(Colors.primary),
 		display: 'flex',
 		'flex-direction': 'column',
 	};

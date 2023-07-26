@@ -1,3 +1,6 @@
+import { Colorizer } from '../../helpers/ColorMode';
+import { Colors } from '../../types/ColorPalettes';
+
 export function Textbox() {
 	const parent = {
 		display: 'flex',
@@ -7,10 +10,11 @@ export function Textbox() {
 	const styles = {
 		textArea: {},
 		button: {
-			backgroundColor: '#d288d7',
+			backgroundColor: Colorizer(Colors.sendingMsg),
 			border: 'none',
-			color: 'white',
+			color: Colorizer(Colors.text),
 			borderRadius: '15px',
+			height: '40px',
 		},
 	};
 

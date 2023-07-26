@@ -1,5 +1,7 @@
 import React from 'react';
 import { store } from '../../store/store';
+import { Colorizer } from '../../helpers/ColorMode';
+import { Colors } from '../../types/ColorPalettes';
 
 export function ChatBubble(props: { styles: string; message: string }) {
 	const state = store.getState().colorModeReducer;
@@ -7,8 +9,8 @@ export function ChatBubble(props: { styles: string; message: string }) {
 
 	const receiving = {
 		margin: '5px',
-		backgroundColor: '#c188d7',
-		color: 'white',
+		backgroundColor: Colorizer(Colors.receivingMsg),
+		color: Colorizer(Colors.text),
 		width: 'fit-content',
 		maxWidth: '300px',
 		padding: '10px',
@@ -17,8 +19,8 @@ export function ChatBubble(props: { styles: string; message: string }) {
 
 	const sending = {
 		margin: '5px',
-		backgroundColor: '#8898d7',
-		color: 'white',
+		backgroundColor: Colorizer(Colors.sendingMsg),
+		color: Colorizer(Colors.text),
 		width: 'fit-content',
 		maxWidth: '300px',
 		padding: '10px',
