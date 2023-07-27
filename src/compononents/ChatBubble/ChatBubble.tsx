@@ -1,12 +1,8 @@
 import React from 'react';
-import { store } from '../../store/store';
 import { Colorizer } from '../../helpers/ColorMode';
 import { Colors } from '../../types/ColorPalettes';
 
 export function ChatBubble(props: { styles: string; message: string }) {
-	const state = store.getState().colorModeReducer;
-	console.log(state);
-
 	const receiving = {
 		margin: '5px',
 		backgroundColor: Colorizer(Colors.receivingMsg),

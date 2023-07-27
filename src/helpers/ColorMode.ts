@@ -7,7 +7,7 @@ import {
 } from '../types/ColorPalettes';
 import { store } from '../store/store';
 
-const state = store.getState().colorModeReducer;
+const state = store.getState().colors.interfaceColor;
 
 export const Colorizer = (color: string) => {
 	if (!state.darkMode && !state.unicornMode) {

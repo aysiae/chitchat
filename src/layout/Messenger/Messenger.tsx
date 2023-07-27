@@ -6,9 +6,6 @@ import { Colors } from '../../types/ColorPalettes';
 import { store } from '../../store/store';
 
 export function Messenger() {
-	const state = store.getState().messagesReducer;
-	console.log(state);
-
 	const styles = {
 		margin: 'auto',
 		padding: '15px',

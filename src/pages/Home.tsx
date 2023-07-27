@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from '../compononents/Header/Header';
 import { Messenger } from '../layout/Messenger/Messenger';
 
