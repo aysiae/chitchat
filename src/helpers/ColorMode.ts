@@ -5,11 +5,9 @@ import {
 	LightMode,
 	DarkMode,
 } from '../types/ColorPalettes';
-import { store } from '../store/store';
+import { ColorModes } from '../store/features/colorModeSlice';
 
-const state = store.getState().colors.interfaceColor;
-
-export const Colorizer = (color: string) => {
+export const Colorizer = (color: string, state: ColorModes) => {
 	if (!state.darkMode && !state.unicornMode) {
 		if (color === Colors.background) {
 			return LightMode.primaryOne;

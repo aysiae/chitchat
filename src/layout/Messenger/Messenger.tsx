@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ChatBubble } from '../../compononents/ChatBubble/ChatBubble';
 import { Textbox } from '../../compononents/Textbox/Textbox';
 import { Colorizer } from '../../helpers/ColorMode';
 import { Colors } from '../../types/ColorPalettes';
-import { store } from '../../store/store';
+import { store, useAppSelector } from '../../store/store';
 
 export function Messenger() {
+	const colors = useAppSelector((state) => state.colors.interfaceColor);
+
 	const styles = {
 		margin: 'auto',
 		padding: '15px',
 		width: '500px',
 		borderRadius: '15px',
-		backgroundColor: Colorizer(Colors.primary),
+		backgroundColor: Colorizer(Colors.primary, colors),
 		display: 'flex',
 		'flex-direction': 'column',
 	};

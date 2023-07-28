@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Colorizer } from '../../helpers/ColorMode';
 import { Colors } from '../../types/ColorPalettes';
+import { useAppDispatch, useAppSelector } from '../../store/store';
 
 export function ChatBubble(props: { styles: string; message: string }) {
+	const dispatch = useAppDispatch();
+	const colors = useAppSelector((state) => state.colors.interfaceColor);
+
+	useEffect(() => {}, [dispatch, colors]);
+
 	const receiving = {
 		margin: '5px',
-		backgroundColor: Colorizer(Colors.receivingMsg),
-		color: Colorizer(Colors.text),
+		backgroundColor: Colorizer(Colors.receivingMsg, colors),
+		color: Colorizer(Colors.text, colors),
 		width: 'fit-content',
 		maxWidth: '300px',
 		padding: '10px',
@@ -15,8 +21,8 @@ export function ChatBubble(props: { styles: string; message: string }) {
 
 	const sending = {
 		margin: '5px',
-		backgroundColor: Colorizer(Colors.sendingMsg),
-		color: Colorizer(Colors.text),
+		backgroundColor: Colorizer(Colors.sendingMsg, colors),
+		color: Colorizer(Colors.text, colors),
 		width: 'fit-content',
 		maxWidth: '300px',
 		padding: '10px',

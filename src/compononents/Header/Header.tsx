@@ -2,7 +2,7 @@ import { NavBar } from '../NavBar/Navbar';
 import Switch from '@mui/material/Switch';
 import './Header.scss';
 import React from 'react';
-import { useAppDispatch } from '../../store/store';
+import { useAppDispatch, useAppSelector } from '../../store/store';
 import {
 	toggleDarkMode,
 	toggleUnicornMode,
